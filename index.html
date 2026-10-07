@@ -1,74 +1,365 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:description" content="Solução em criação de sites - Seu site, do seu jeito!" />
-  <meta property="og:image" content="https://marvincode.com.br/images/img-share.jpg" />
-  <title>MarvinCode - Serviços de Desenvolvimento Web</title>
-  <link rel="preload" href="images/capa-contato.svg" as="image">
-  <link rel="preload" href="images/capa-sobre.svg" as="image">
-  <link rel="preload" href="images/capa-servicos.svg" as="image">
-  <link rel="preload" href="images/capa-projetos.svg" as="image">
-  <link rel="preload" href="images/deblandomais.jpg" as="image">
-  <link rel="shortcut icon" href="images/perfil.ico">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="https://unpkg.com/scrollreveal"></script>
-</head>
-<body>
-
-  <!-- Tela de carregamento -->
-  <div id="loader">
-    <p>Loading <span class="dot">	&#9001; </span><span class="dot">&#9002; </span><span class="dot"> &#9829;</span></p>
-  </div>
-
-
-  <div class="container">
-    <div class="text-section">
-      <h1>Olá, eu sou <br><span>MarvinCode.</span></h1>
-      <img class="image-section" src="images/marvincode.png" alt="MarvinCode">
-    </div>
-    <div class="propaganda">
-      <h3>CRIAÇÃO DE SITES RÁPIDOS, MODERNOS E COM FOCO EM RESULTADOS.</h3>
-      <p>Desenvolvimento de sites personalizados que valorizam a sua marca, com visual moderno, fácil navegação e foco em resultados.</p>
-          
-    </div>
-
-    <div class="carrossel">
-      <div class="slides">
-        <img src="images/web-page-propaganda.svg" alt="Um rapaz utilizando um laptop, acessando uma webpage." class="propaganda-web ativo">
-        <img src="images/web-page-propaganda02.svg" alt="Um rapaz utilizando um laptop, acessando uma webpage." class="propaganda-web">
-      </div>      
-    </div>
-    
-    
-    <div class="button">
-      <button onclick="openPopup('contact')">ENTRE EM CONTATO <i class="fa-solid fa-mobile-retro"></i></button>
-    </div>
-    <div class="links" style="opacity: 1;">
-      <a href="#" onclick="openPopup('about')">SOBRE MIM</a>
-      <a href="#" onclick="openPopup('services')">SERVIÇOS</a>
-      <a href="#" onclick="openPopup('projects')">PROJETOS</a>
-    </div>      
-  </div>
-  
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></span>
-      <div id="popup-body"></div>
-    </div>
-  </div>
-  <canvas id="spotlight"></canvas>
-  <script src="script.js"></script>
-
-  <footer id="footer">
-    <div class="text-footer">
-      <p style="margin-top: 0; margin-bottom: 0;"> &copy MarvinCode - 2025 Todos os direitos reservados.</p>
-      <p>"Quem segue a justiça e a lealdade encontra vida, justiça e honra." - Provérbios 21:21 (NAA)</p>
-    </div>
-  </footer>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101312" />
+    <meta
+      name="description"
+      content="MarvinCode — desenvolvimento de sites, landing pages e portfólios. Design com personalidade, navegação simples e atenção aos detalhes."
+    />
+    <meta
+      property="og:title"
+      content="MarvinCode — Ideias ganham forma na web"
+    />
+    <meta
+      property="og:description"
+      content="Sites com personalidade. Código com propósito. Conheça meus projetos e vamos conversar sobre o seu."
+    />
+    <meta
+      property="og:image"
+      content="https://marvincode.com.br/images/img-share.jpg"
+    />
+    <meta property="og:url" content="https://marvincode.com.br/" />
+    <meta property="og:type" content="website" />
+    <title>MarvinCode — Desenvolvimento Web</title>
+    <link rel="canonical" href="https://marvincode.com.br/" />
+    <link rel="icon" href="images/perfil.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#principal">Pular para o conteúdo</a>
+    <header class="header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#inicio" aria-label="MarvinCode, início"
+          ><span class="brand-mark" aria-hidden="true">m<span>c</span></span
+          >marvin<span>code</span><span class="brand-dot">.</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          aria-label="Abrir menu"
+        >
+          <span></span><span></span>
+        </button>
+        <nav id="navigation" aria-label="Navegação principal">
+          <a href="#projetos">Projetos</a><a href="#servicos">Serviços</a
+          ><a href="#sobre">Sobre mim</a
+          ><a class="nav-contact" href="#contato"
+            >Vamos conversar <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="principal">
+      <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow hero-enter">
+            <span class="status-dot"></span> MARVINCODE / DESENVOLVIMENTO WEB
+          </p>
+          <h1 class="hero-enter" id="hero-title">
+            Ideias ganham<br />forma <span class="serif">na web.</span
+            ><span class="title-dot">✳</span>
+          </h1>
+          <p class="hero-description hero-enter">
+            Olá, sou Marcos Vinícius. Transformo ideias em sites com
+            personalidade, navegação simples e atenção aos detalhes.
+          </p>
+          <div class="actions hero-enter">
+            <a class="button primary" href="#projetos"
+              >Explore meus projetos <span aria-hidden="true">↗</span></a
+            ><a class="text-link" href="#contato"
+              >Vamos criar algo juntos <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="hero-note hero-enter">
+            <span aria-hidden="true">⌘</span> Design com intenção. Código com
+            propósito.
+          </div>
+        </div>
+        <div class="hero-art hero-enter" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="art-cross">+</div>
+          <div class="art-caption">IDEIA → DESIGN → CÓDIGO</div>
+          <div class="browser-card">
+            <div class="browser-top">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span>uma ideia em construção</span><span>↗</span>
+            </div>
+            <div class="mock-page">
+              <div class="mock-nav">
+                <strong>seu próximo site<span>.</span></strong
+                ><span>feito para você ↗</span>
+              </div>
+              <div class="mock-label">DO PRIMEIRO RASCUNHO AO ÚLTIMO PIXEL</div>
+              <div class="mock-title">
+                Simples.<br />Marcante.<br /><em>Seu.</em>
+              </div>
+              <div class="mock-bottom">
+                <span class="mock-button">Dê vida à sua ideia ↗</span
+                ><span class="mock-star">✳</span>
+              </div>
+            </div>
+          </div>
+          <div class="code-tag">
+            <span>&lt;/&gt;</span> HTML · CSS · JavaScript
+          </div>
+          <div class="design-tag">
+            <span class="status-dot"></span> pensado nos detalhes
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <a href="#projetos"
+            >ROLE PARA EXPLORAR <span aria-hidden="true">↓</span></a
+          ><span>CRIATIVIDADE + TECNOLOGIA</span>
+        </div>
+      </section>
+      <div class="skills-strip">
+        <div class="wrap">
+          <span>HTML5</span><i aria-hidden="true">✳</i><span>CSS3</span
+          ><i aria-hidden="true">✳</i><span>JavaScript</span
+          ><i aria-hidden="true">✳</i><span>Design responsivo</span
+          ><i aria-hidden="true">✳</i><span>Detalhes que importam</span>
+        </div>
+      </div>
+      <section
+        class="section wrap"
+        id="projetos"
+        aria-labelledby="projects-title"
+      >
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">01 / PROJETOS</p>
+            <h2 id="projects-title">
+              Do conceito<br />à <span class="serif">experiência.</span>
+            </h2>
+          </div>
+          <p>
+            Um olhar sobre o que construí.<br />Cada projeto, uma ideia com
+            identidade.
+          </p>
+        </div>
+        <article class="project reveal">
+          <a
+            class="project-visual"
+            href="https://deblandomais.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar o site Deblando Mais Som (abre em nova aba)"
+            ><div class="project-browser">
+              <span aria-hidden="true">● ● ●</span
+              ><span>deblandomais.com.br</span
+              ><span aria-hidden="true">↗</span>
+            </div>
+            <img
+              src="images/deblandomais.jpg"
+              alt="Página do site Deblando Mais Som, projeto de som automotivo"
+              width="1200"
+              height="675"
+              loading="lazy"
+            /><span class="image-cta"
+              >Explorar o site <span aria-hidden="true">↗</span></span
+            ></a
+          >
+          <div class="project-info">
+            <div>
+              <p class="eyebrow">WEBSITE / NEGÓCIO LOCAL</p>
+              <h3>Deblando Mais Som<span>.</span></h3>
+              <p>
+                Uma presença digital para apresentar serviços de som automotivo,
+                produtos e canais de atendimento. Informação organizada para
+                aproximar a loja dos clientes.
+              </p>
+              <div class="tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span
+                ><span>Responsivo</span>
+              </div>
+            </div>
+            <a
+              class="round-link"
+              href="https://deblandomais.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar Deblando Mais Som (abre em nova aba)"
+              >↗</a
+            >
+          </div>
+        </article>
+        <a
+          class="github-link reveal"
+          href="https://github.com/marvincodebr"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span>Curioso sobre o código?</span> Veja meu GitHub
+          <span aria-hidden="true">↗</span></a
+        >
+      </section>
+      <section
+        class="services-section"
+        id="servicos"
+        aria-labelledby="services-title"
+      >
+        <div class="section wrap">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">02 / O QUE EU FAÇO</p>
+              <h2 id="services-title">
+                Sua presença digital.<br /><span class="serif"
+                  >Do seu jeito.</span
+                >
+              </h2>
+            </div>
+            <p>
+              Sites feitos para pessoas e pequenos negócios.<br />Com clareza,
+              cuidado e personalidade.
+            </p>
+          </div>
+          <div class="services-grid">
+            <article class="service reveal">
+              <div class="service-top">
+                <span>01</span
+                ><span class="service-icon" aria-hidden="true">↗</span>
+              </div>
+              <h3>Landing pages</h3>
+              <p>
+                Uma página com foco na sua mensagem. Para apresentar um serviço,
+                divulgar uma ideia ou dar o primeiro passo na web.
+              </p>
+              <span class="service-foot">UMA IDEIA. UM OBJETIVO.</span>
+            </article>
+            <article class="service reveal">
+              <div class="service-top">
+                <span>02</span
+                ><span class="service-icon" aria-hidden="true">&lt;/&gt;</span>
+              </div>
+              <h3>Sites institucionais</h3>
+              <p>
+                Seu negócio bem apresentado. Serviços, informações e contato em
+                um site organizado e fácil de navegar.
+              </p>
+              <span class="service-foot">SUA MARCA EM CADA DETALHE.</span>
+            </article>
+            <article class="service reveal">
+              <div class="service-top">
+                <span>03</span
+                ><span class="service-icon" aria-hidden="true">✳</span>
+              </div>
+              <h3>Portfólios</h3>
+              <p>
+                Um espaço que tem a sua cara. Mostre seus trabalhos e facilite o
+                contato para novas oportunidades.
+              </p>
+              <span class="service-foot">SEU TRABALHO EM DESTAQUE.</span>
+            </article>
+          </div>
+          <div class="process reveal">
+            <p>Como a ideia vira site</p>
+            <ol>
+              <li><span>01</span> Conversa e direção</li>
+              <li><span>02</span> Design e desenvolvimento</li>
+              <li><span>03</span> Revisão e entrega</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section wrap about"
+        id="sobre"
+        aria-labelledby="about-title"
+      >
+        <div class="about-visual reveal">
+          <div class="portrait-frame">
+            <img
+              src="images/marvincode.png"
+              alt="Marcos Vinícius, desenvolvedor do MarvinCode"
+              width="400"
+              height="400"
+              loading="lazy"
+            /><span class="portrait-star" aria-hidden="true">✳</span>
+          </div>
+          <div class="portrait-label">
+            <span>MARCOS VINÍCIUS</span
+            ><span>O rosto por trás do código ↗</span>
+          </div>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">03 / PRAZER, MARVIN</p>
+          <h2 id="about-title">
+            Um pouco de mim.<br />Muito de <span class="serif">dedicação.</span>
+          </h2>
+          <p>
+            Sou Marcos Vinícius, o MarvinCode. Um desenvolvedor front-end em
+            constante aprendizado, que gosta de unir criatividade e tecnologia
+            para construir coisas úteis.
+          </p>
+          <p>
+            Acredito na força da simplicidade: um site bem pensado, com
+            informação clara e uma experiência agradável. É com esse olhar que
+            cuido de cada projeto, do primeiro rascunho aos últimos detalhes.
+          </p>
+          <div class="about-values">
+            <span>Clareza</span><span>Propósito</span><span>Evolução</span>
+          </div>
+          <a class="text-link" href="#contato"
+            >Vamos tirar sua ideia do papel
+            <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section
+        class="contact-section"
+        id="contato"
+        aria-labelledby="contact-title"
+      >
+        <div class="wrap contact reveal">
+          <p class="eyebrow">04 / VAMOS CONVERSAR</p>
+          <h2 id="contact-title">
+            Tem uma ideia?<br /><span class="serif">Vamos dar vida a ela.</span>
+            <span aria-hidden="true">↗</span>
+          </h2>
+          <div class="contact-bottom">
+            <p>
+              Conte o que você tem em mente.<br />O próximo projeto pode começar
+              com uma conversa.
+            </p>
+            <a
+              class="button primary"
+              href="https://wa.me/5561992701884?text=Ol%C3%A1%2C%20vim%20pelo%20MarvinCode%20e%20quero%20conversar%20sobre%20um%20site."
+              target="_blank"
+              rel="noopener noreferrer"
+              >Conversar no WhatsApp <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="contact-links">
+            <a href="mailto:viniiciussd@hotmail.com"
+              >viniiciussd@hotmail.com <span aria-hidden="true">↗</span></a
+            ><a
+              href="https://github.com/marvincodebr"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap footer">
+      <div>
+        <a class="brand" href="#inicio"
+          >marvin<span>code</span><span class="brand-dot">.</span></a
+        >
+        <p>© <span id="year">2026</span> MarvinCode. Feito com propósito.</p>
+      </div>
+      <p class="footer-verse">
+        “Quem segue a justiça e a lealdade encontra vida, justiça e honra.”<br /><span
+          >Provérbios 21:21 · NAA</span
+        >
+      </p>
+      <a class="back-top" href="#inicio" aria-label="Voltar ao início">↑</a>
+    </footer>
+  </body>
 </html>
-
