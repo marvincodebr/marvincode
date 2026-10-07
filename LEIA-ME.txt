@@ -1,0 +1,7 @@
+MarvinCode — Portfólio
+
+Extraia a pasta e abra index.html no navegador.
+Edite index.html para os textos e links, style.css para o visual e script.js para as animações.
+Mantenha a foto e o PDF na mesma pasta.
+Para hospedar, envie todos os arquivos dessa pasta para seu serviço de hospedagem.
+A fonte Manrope é carregada do Google Fonts; sem internet, será usada Arial.

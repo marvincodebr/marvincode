@@ -1,74 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:description" content="Solução em criação de sites - Seu site, do seu jeito!" />
-  <meta property="og:image" content="https://marvincode.com.br/images/img-share.jpg" />
-  <title>MarvinCode - Serviços de Desenvolvimento Web</title>
-  <link rel="preload" href="images/capa-contato.svg" as="image">
-  <link rel="preload" href="images/capa-sobre.svg" as="image">
-  <link rel="preload" href="images/capa-servicos.svg" as="image">
-  <link rel="preload" href="images/capa-projetos.svg" as="image">
-  <link rel="preload" href="images/deblandomais.jpg" as="image">
-  <link rel="shortcut icon" href="images/perfil.ico">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="https://unpkg.com/scrollreveal"></script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MarvinCode — Marcos Vinícius · Front-end Júnior</title>
+<meta name="description" content="Portfólio de Marcos Vinícius. Desenvolvimento front-end com HTML, CSS e JavaScript. Conheça meus projetos.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23141921'/%3E%3Cpath d='M7 23V9l9 9 9-9v14' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-
-  <!-- Tela de carregamento -->
-  <div id="loader">
-    <p>Loading <span class="dot">	&#9001; </span><span class="dot">&#9002; </span><span class="dot"> &#9829;</span></p>
-  </div>
-
-
-  <div class="container">
-    <div class="text-section">
-      <h1>Olá, eu sou <br><span>MarvinCode.</span></h1>
-      <img class="image-section" src="images/marvincode.png" alt="MarvinCode">
-    </div>
-    <div class="propaganda">
-      <h3>CRIAÇÃO DE SITES RÁPIDOS, MODERNOS E COM FOCO EM RESULTADOS.</h3>
-      <p>Desenvolvimento de sites personalizados que valorizam a sua marca, com visual moderno, fácil navegação e foco em resultados.</p>
-          
-    </div>
-
-    <div class="carrossel">
-      <div class="slides">
-        <img src="images/web-page-propaganda.svg" alt="Um rapaz utilizando um laptop, acessando uma webpage." class="propaganda-web ativo">
-        <img src="images/web-page-propaganda02.svg" alt="Um rapaz utilizando um laptop, acessando uma webpage." class="propaganda-web">
-      </div>      
-    </div>
-    
-    
-    <div class="button">
-      <button onclick="openPopup('contact')">ENTRE EM CONTATO <i class="fa-solid fa-mobile-retro"></i></button>
-    </div>
-    <div class="links" style="opacity: 1;">
-      <a href="#" onclick="openPopup('about')">SOBRE MIM</a>
-      <a href="#" onclick="openPopup('services')">SERVIÇOS</a>
-      <a href="#" onclick="openPopup('projects')">PROJETOS</a>
-    </div>      
-  </div>
-  
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></span>
-      <div id="popup-body"></div>
-    </div>
-  </div>
-  <canvas id="spotlight"></canvas>
-  <script src="script.js"></script>
-
-  <footer id="footer">
-    <div class="text-footer">
-      <p style="margin-top: 0; margin-bottom: 0;"> &copy MarvinCode - 2025 Todos os direitos reservados.</p>
-      <p>"Quem segue a justiça e a lealdade encontra vida, justiça e honra." - Provérbios 21:21 (NAA)</p>
-    </div>
-  </footer>
-</body>
-
-</html>
-
+<div class="backdrop" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
+<header class="header wrap"><a class="brand" href="#inicio" aria-label="MarvinCode, início">marvin<span>code.</span></a><nav aria-label="Navegação principal"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a></nav></header>
+<main class="wrap">
+<section id="inicio" class="hero" aria-labelledby="title">
+<div class="portrait"><img src="marcos.png" alt="Retrato de Marcos Vinícius" width="1195" height="1316" fetchpriority="high"><span class="portrait-caption">MARCOS VINÍCIUS / MARVINCODE</span></div>
+<div class="intro"><p class="eyebrow">DESENVOLVEDOR FRONT-END JÚNIOR</p><h1 id="title">Marcos<br><span>Vinícius.</span></h1><p class="summary">Desenvolvo interfaces para a web com HTML, CSS e JavaScript. Busco uma oportunidade júnior para contribuir e evoluir com uma equipe.</p><div class="hero-actions"><a class="button" href="#projetos">Ver projetos</a><a class="button button-outline" href="curriculo-marcos-vinicius.pdf" download>Baixar currículo</a></div><div class="social-links" aria-label="Redes profissionais"><a href="https://github.com/marvincodebr/" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (abre em nova aba)</span></a><a href="https://www.linkedin.com/in/marcos-vin%C3%ADcius-santos" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a><a href="mailto:viniiciussd@hotmail.com">E-mail</a></div><div class="tech" aria-label="Tecnologias"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+</section>
+<section id="projetos" class="projects" aria-labelledby="project-title"><div class="section-top"><h2 id="project-title">Projetos selecionados<span>.</span></h2><span class="section-number">01 / TRABALHOS</span></div>
+<article class="project reveal"><div class="project-art automotive"><span class="art-label">WEBSITE / COMÉRCIO LOCAL</span><div class="project-wordmark">DEBLANDO<span>MAIS SOM</span></div><span class="art-bottom">SOM AUTOMOTIVO & ACESSÓRIOS</span></div><div class="project-detail"><p class="eyebrow">01 — SITE INSTITUCIONAL</p><h3>Deblando Mais Som</h3><p>Site para uma loja de som e acessórios automotivos, com apresentação de serviços e formulário de orçamento.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>EmailJS</span></div><a class="text-link" href="https://deblandomais.com.br/" target="_blank" rel="noopener noreferrer">Visitar site<span class="sr-only"> (abre em nova aba)</span></a></div></article>
+<article class="project reveal"><div class="project-art portfolio-art"><span class="art-label">WEBSITE / PORTFÓLIO PESSOAL</span><div class="project-wordmark">marvin<span class="code-word">code.</span></div><span class="art-bottom">DESIGN & DESENVOLVIMENTO FRONT-END</span></div><div class="project-detail"><p class="eyebrow">02 — PORTFÓLIO</p><h3>MarvinCode</h3><p>Meu espaço na web para reunir projetos, apresentar minhas habilidades e acompanhar minha evolução no front-end.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="text-link" href="#inicio">Explorar esta página</a></div></article>
+</section>
+<section id="sobre" class="about reveal" aria-labelledby="about-title"><p class="eyebrow">UM POUCO SOBRE MIM</p><div class="about-content"><h2 id="about-title">Código, atenção<br>e vontade de aprender<span>.</span></h2><div><p>Sou Marcos Vinícius, também conhecido como Marvin. Estudo desenvolvimento front-end e coloco o aprendizado em prática construindo sites.</p><p>Trabalho com HTML, CSS, JavaScript e bibliotecas conforme as necessidades de cada projeto. Quero seguir aprendendo, colaborar com uma equipe e desenvolver soluções úteis para quem usa a web.</p><p class="opportunity">Em busca de uma oportunidade como Front-end Júnior.</p></div></div></section>
+<section id="contato" class="contact" aria-labelledby="contact-title"><div><p class="eyebrow">CONTATO</p><h2 id="contact-title">Vamos conversar<span>?</span></h2></div><a class="contact-email" href="mailto:viniiciussd@hotmail.com">viniiciussd@hotmail.com</a></section></main><footer class="footer wrap"><a class="brand" href="#inicio">marvin<span>code.</span></a><span>Marcos Vinícius · <span id="year">2026</span></span><a href="#inicio">Voltar ao início</a></footer>
+</body></html>
